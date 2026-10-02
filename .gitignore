@@ -2,8 +2,6 @@
 __pycache__/
 *.pyc
 .DS_Store
-models/*.joblib
-models/*.json
 data/raw/
 data/processed/
 *.zip
