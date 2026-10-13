@@ -77,4 +77,4 @@ def pipeline():
     )
 
     html = f'<div class="pipeline">{items}</div>'
-    st.markdown(html, unsafe_allow_html=True)
+    st.html(html)
