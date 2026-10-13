@@ -67,13 +67,14 @@ def pipeline():
         ("06", "Verdict"),
         ("07", "Robustness"),
     ]
-    html = '<div class="pipeline">'
-    for n, title in steps:
-        html += f"""
-        <div class="pipeline-step">
-            <div class="step-no">{n}</div>
-            <div class="step-title">{title}</div>
-        </div>
-        """
-    html += "</div>"
+
+    items = "".join(
+        f'<div class="pipeline-step">'
+        f'<div class="step-no">{number}</div>'
+        f'<div class="step-title">{title}</div>'
+        f'</div>'
+        for number, title in steps
+    )
+
+    html = f'<div class="pipeline">{items}</div>'
     st.markdown(html, unsafe_allow_html=True)
